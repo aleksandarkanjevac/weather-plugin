@@ -21,3 +21,6 @@ include( WEATHER_DIR . 'includes/weather-menu.php');
 // Create Settings Fields
 include( WEATHER_DIR . 'includes/weather-settings-page-fields.php');
 
+//Create Shortcode for location
+include( WEATHER_DIR . 'includes/weather-shortcode.php');
+
