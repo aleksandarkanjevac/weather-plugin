@@ -24,3 +24,6 @@ include( WEATHER_DIR . 'includes/weather-settings-page-fields.php');
 //Create Shortcode for location
 include( WEATHER_DIR . 'includes/weather-shortcode.php');
 
+//Create Action for AJAX
+include( WEATHER_DIR . 'includes/weather-ajax.php');
+
