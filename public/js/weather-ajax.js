@@ -1,7 +1,7 @@
 (function($) {
   $(document).ready(function() {
 
-    $('#addCity').on('click',function(){
+    $(document).on('click','.addCity',function(){
 
       let city = $('input:text').val();
 
@@ -15,12 +15,18 @@
         },
         success: function(res) {
             $('.weather-wrapper').html(res);
-        
+            console.log('success ovde')
         },
-        error : function(error){     console.log(weather_ajax_object.ajax_url)}
+        error : function(error){ console.log('error ovde')}
       })
 
     })
+    $(document).on('keypress',function(e) {
+      if(e.which == 13) {
+        $('.addCity').trigger('click');
+        return false;
+      }
+    });
   });
 
 })(jQuery);

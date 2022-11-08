@@ -55,6 +55,6 @@ function weather_location_settings_city_text_callback() {
 		$city_name = esc_html( $options['city_name'] );
 	}
 
-  echo '<input type="text" id="weather_city" name="weather_location_settings[city_name]" value="' . $city_name . '" />';
+  echo '<input type="text" id="weather_city" name="weather_location_settings[city_name]" value="' . ucwords(strtolower($city_name)) . '" />';
 
 }

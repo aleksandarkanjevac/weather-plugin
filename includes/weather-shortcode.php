@@ -8,7 +8,7 @@ function weather_shortcode($atts){
 		'city_name' => $city_name,
 	), $atts );
 
-  $city = $atts['city_name'];
+  $city = ucwords(strtolower($atts['city_name']));
  
   $response = wp_remote_get( 'https://api.openweathermap.org/data/2.5/weather?q='. $city.'&limit=5&appid=a5749f6e3d488fcdd50c3be5373f57f0&units=metric' );
 
@@ -19,7 +19,7 @@ function weather_shortcode($atts){
   $temperature_max = $api_response["main"]["temp_max"];
   
   $html = '<div class="weather-wrapper"><h2>'.$city.'</h2><p>Temperature: '.$temperature.' °C</p><p>Min. Temperature: '.$temperature_min.' °C</p><p>Max. Temperature: '.$temperature_max.' °C</p>
-  <input type="text" id="weatherCity" name="weather_location_settings_' . $city . '" value="' . $city . '" /><button id="addCity">Add city</button></div>';
+  <input type="text" id="weatherCity" name="weather_location_settings_' . $city . '" value="' . $city . '" /><button class="addCity">Add city</button></div>';
     
   return $html;
 
