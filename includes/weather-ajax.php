@@ -7,3 +7,4 @@ function weather_ajax_shortcode() {
 
 add_action('wp_ajax_weather_ajax_shortcode', 'weather_ajax_shortcode');
 add_action('wp_ajax_nopriv_weather_ajax_shortcode', 'weather_ajax_shortcode');
+?>
