@@ -14,7 +14,7 @@
             city: city,
         },
         success: function(res) {
-            var result = JSON.parse(res);
+            let result = JSON.parse(res);
             $('#cityName').text(city)
             $('#weatherCity').attr('value', city)
             $('#temperature').text(result.temperature)
