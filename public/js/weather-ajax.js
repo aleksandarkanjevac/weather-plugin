@@ -14,8 +14,12 @@
             city: city,
         },
         success: function(res) {
-            $('.weather-wrapper').html(res);
-            console.log('success ovde')
+            var result = JSON.parse(res);
+            $('#cityName').text(city)
+            $('#weatherCity').attr('value', city)
+            $('#temperature').text(result.temperature)
+            $('#temperatureMin').text(result.temperature_min)
+            $('#temperatureMax').text(result.temperature_max)
         },
         error : function(error){ console.log('error ovde')}
       })

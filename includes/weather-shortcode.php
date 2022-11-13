@@ -18,7 +18,7 @@ function weather_shortcode($atts){
   $temperature_min = $api_response["main"]["temp_min"];
   $temperature_max = $api_response["main"]["temp_max"];
   
-  $html = '<div class="weather-wrapper"><h2>'.$city.'</h2><p>Temperature: '.$temperature.' °C</p><p>Min. Temperature: '.$temperature_min.' °C</p><p>Max. Temperature: '.$temperature_max.' °C</p>
+  $html = '<div class="weather-wrapper"><h2 id="cityName">'.$city.'</h2><p>Temperature: <span id="temperature">'.$temperature.' </span>°C</p><p>Min. Temperature: <span id="temperatureMin">'.$temperature_min.' </span>°C</p><p>Max. Temperature: <span id="temperatureMax">'.$temperature_max.' </span>°C</p>
   <input type="text" id="weatherCity" name="weather_location_settings_' . $city . '" value="' . $city . '" /><button class="addCity">Add city</button></div>';
     
   return $html;
